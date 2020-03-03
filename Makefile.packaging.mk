@@ -2,7 +2,7 @@
 .PHONY: rpm deb packages deploy-packages
 
 local-install:
-	$(MAKE) install PREFIX=usr
+	$(MAKE) install PREFIX=usr DESTDIR=.
 
 NAME=restclient-cpp
 VERSION = $(shell git describe --tags --always --dirty)
